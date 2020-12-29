@@ -50,27 +50,27 @@ public class Application {
     public void quit(){
         driver.quit();}
 
-    public void GoToMetro() throws InterruptedException {
+    public void GoToMetro(){
         mainPage.open();
         filterPage.GoToFilter();
         metrostationPage.GoToMetro();
     }
 
-    public void GoToFilter() throws InterruptedException {
+    public void GoToFilter(){
         mainPage.open();
         filterPage.GoToFilter();
     }
 
-    public void AddFirstNStations(int HowManyItems) throws InterruptedException {
+    public void AddFirstNStations(int HowManyItems){
         for(int i=1;i<=HowManyItems;i++){
             metrostationPage.FirstNStation(i).click();
         }
     }
 
-    public void CheckNoClick() throws InterruptedException {
+    public void CheckNoClick(){
         assertFalse(TryToClick(metrostationPage.btnApply()));
     }
-    public void ExitAndСomparisonwithAdd(int HowManyStationsWasSelected) throws InterruptedException {
+    public void ExitAndСomparisonwithAdd(int HowManyStationsWasSelected){
         metrostationPage.DialogApply.click();
         String StrButton = filterPage.MetroWithValue.getText();;
         String[] words = StrButton.split("\\s");
@@ -78,7 +78,7 @@ public class Application {
         assertTrue(N == HowManyStationsWasSelected);
     }
 
-    public void AddNStationsAndСomparisonWithBtn(int HowManyItems) throws InterruptedException {
+    public void AddNStationsAndСomparisonWithBtn(int HowManyItems){
 
         for(int i=1 ;i<=HowManyItems;i++){
             metrostationPage.FirstNStation(i).click();
@@ -89,48 +89,48 @@ public class Application {
         }
     }
 
-    public void CheckElement(String DataMarker) throws InterruptedException {
+    public void CheckElement(String DataMarker){
         assertTrue(isElementPresent(metrostationPage.Check(DataMarker)));
     }
-    public void CheckNoElement(String DataMarker) throws InterruptedException {
+    public void CheckNoElement(String DataMarker){
         assertFalse(isElementPresent(metrostationPage.Check(DataMarker)));
     }
-    public void NoEnabled(String DataMarker) throws InterruptedException {
+    public void NoEnabled(String DataMarker){
         assertFalse(metrostationPage.BtnCheck(DataMarker).isEnabled());
     }
-    public void Enabled(String DataMarker) throws InterruptedException {
+    public void Enabled(String DataMarker){
         assertTrue(metrostationPage.BtnCheck(DataMarker).isEnabled());
     }
 
-    public void ChoiceStation(String Station) throws InterruptedException {
+    public void ChoiceStation(String Station){
         metrostationPage.ChoiceStation(Station).click();
     }
 
-    public void TabStations() throws InterruptedException {
+    public void TabStations(){
         metrostationPage.TabStation.click();
     }
-    public void TabLines() throws InterruptedException {
+    public void TabLines(){
        metrolinePage.LineStation.click();
     }
 
-    public void Search() throws InterruptedException {
+    public void Search(){
         metrosearchPage.SearchInput.sendKeys("туш");
         assertTrue(metrosearchPage.FirstInSearch.getText().equals("Тушинская"));
     }
 
-    public void CloseSearch() throws InterruptedException {
+    public void CloseSearch(){
         String StrSearch = metrosearchPage.SearchInput.getText();
         assertTrue(StrSearch.equals(""));
     }
 
-    public void ChoiceOnOtherTab() throws InterruptedException {
+    public void ChoiceOnOtherTab(){
         assertFalse(TryToClick(metrolinePage.AcademBy()));
         metrolinePage.Kalyjsh.click();
         String ChoiceStation = metrolinePage.AcademElement.getAttribute("aria-checked");
         assertTrue(ChoiceStation.equals("true"));
     }
 
-    public void TabsDontLostStation() throws InterruptedException {
+    public void TabsDontLostStation(){
         String Station = metrostationPage.FirstStation.getAttribute("aria-checked");
         TabLines();
         TabStations();

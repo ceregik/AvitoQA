@@ -53,7 +53,7 @@ public class test {
 
 
     @Test
-    public void Tabstest() throws InterruptedException {
+    public void Tabstest(){
         driver.get("https://m.avito.ru/moskva/kommercheskaya_nedvizhimost");
         driver.findElement(By.cssSelector("div[data-marker='search-bar/filter']")).click();
         driver.findElement(By.cssSelector("div[data-marker='metro-select/withoutValue']")).click();
@@ -70,7 +70,7 @@ public class test {
 
 
     @Test
-    public void ButtonTest() throws InterruptedException {
+    public void ButtonTest(){
         driver.get("https://m.avito.ru/moskva/kommercheskaya_nedvizhimost");
         driver.findElement(By.cssSelector("div[data-marker='search-bar/filter']")).click();
         driver.findElement(By.cssSelector("div[data-marker='metro-select/withoutValue']")).click();
@@ -86,7 +86,7 @@ public class test {
     }
 
     @Test
-    public void LinesTest() throws InterruptedException {
+    public void LinesTest(){
         driver.get("https://m.avito.ru/moskva/kommercheskaya_nedvizhimost");
         driver.findElement(By.cssSelector("div[data-marker='search-bar/filter']")).click();
         driver.findElement(By.cssSelector("div[data-marker='metro-select/withoutValue']")).click();
@@ -103,7 +103,7 @@ public class test {
 
 
     @Test
-    public void ThrowOffTest() throws InterruptedException {
+    public void ThrowOffTest(){
         driver.get("https://m.avito.ru/moskva/kommercheskaya_nedvizhimost");
         driver.findElement(By.cssSelector("div[data-marker='search-bar/filter']")).click();
         driver.findElement(By.cssSelector("div[data-marker='metro-select/withoutValue']")).click();
@@ -114,7 +114,7 @@ public class test {
     }
 
     @Test
-    public void SearchTest() throws InterruptedException {
+    public void SearchTest(){
         driver.get("https://m.avito.ru/moskva/kommercheskaya_nedvizhimost");
         driver.findElement(By.cssSelector("div[data-marker='search-bar/filter']")).click();
         driver.findElement(By.cssSelector("div[data-marker='metro-select/withoutValue']")).click();
@@ -128,7 +128,7 @@ public class test {
     }
 
     @Test
-    public void beginTest() throws InterruptedException {
+    public void beginTest(){
         driver.get("https://m.avito.ru/moskva/kommercheskaya_nedvizhimost");
         driver.findElement(By.cssSelector("div[data-marker='search-bar/filter']")).click();
         driver.findElement(By.cssSelector("div[data-marker='metro-select/withoutValue']")).click();
