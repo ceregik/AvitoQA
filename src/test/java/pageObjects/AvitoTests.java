@@ -11,7 +11,7 @@ public class AvitoTests extends TestBase {
     private WebDriverWait wait;
 
     @Test
-    public void Tabstest()  throws InterruptedException {
+    public void Tabstest(){
         app.GoToMetro();
 
         app.AddFirstNStations(1);
@@ -23,7 +23,7 @@ public class AvitoTests extends TestBase {
 
 
     @Test
-    public void ButtonTest() throws InterruptedException {
+    public void ButtonTest(){
 
         app.GoToMetro();
 
@@ -33,7 +33,7 @@ public class AvitoTests extends TestBase {
     }
 
     @Test
-    public void LinesTest() throws InterruptedException {
+    public void LinesTest(){
         app.GoToMetro();
 
         app.ChoiceStation("Академическая");
@@ -46,7 +46,7 @@ public class AvitoTests extends TestBase {
 
 
     @Test
-    public void ThrowOffTest() throws InterruptedException {
+    public void ThrowOffTest(){
         app.GoToMetro();
 
         app.NoEnabled("metro-select-dialog/reset");
@@ -57,7 +57,7 @@ public class AvitoTests extends TestBase {
     }
 
     @Test
-    public void SearchTest() throws InterruptedException {
+    public void SearchTest(){
         app.GoToMetro();
 
         app.Search();
@@ -69,7 +69,7 @@ public class AvitoTests extends TestBase {
     }
 
     @Test
-    public void beginTest() throws InterruptedException {
+    public void beginTest(){
         app.GoToMetro();
 
         int i=3;
