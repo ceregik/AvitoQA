@@ -1,21 +1,10 @@
 package pageObjects;
-import net.bytebuddy.implementation.bytecode.Throw;
-import org.junit.After;
-import org.junit.Before;
+
 import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class AvitoTests extends TestBase {
     private WebDriver driver;
